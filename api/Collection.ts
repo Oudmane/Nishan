@@ -4,6 +4,8 @@ import { Operation } from '../utils';
 
 import Data from "./Data";
 
+import Page from "./Page";
+
 import { ICollection, IPageInput, UpdatableCollectionUpdateParam, NishanArg, IOperation } from "../types";
 
 /**
@@ -62,7 +64,6 @@ class Collection extends Data<ICollection> {
    * @returns An array of newly created page objects
    */
   async addRows(rows: { format: any, properties: any }[]) {
-    const Page = require('./Page');
     const page_ids: string[] = [];
     const ops: IOperation[] = [];
     const current_time = Date.now();
